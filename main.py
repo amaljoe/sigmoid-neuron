@@ -40,8 +40,8 @@ def predict(w, b, x):
 if __name__ == "__main__":
     w, b = -2, 1
     plt.scatter(x, y, color='blue')
-    plt.plot(x, [predict(w, b, i) for i in x], color='green')
+    plt.plot(x, [predict(w, b, i) for i in x], color='red')
     w, b = backtrack(w, b, 1, 1000)
     test(w, b)
-    plt.plot(x, [predict(w, b, i) for i in x], color='red')
+    plt.plot(x, [predict(w, b, i) for i in x], color='green')
     plt.show()
